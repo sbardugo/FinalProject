@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('1') { 
+        stage('git clone') { 
             steps {
 	 echo 'git clone to c:finalproject'
 	 bat 'git clone https://github.com/sbardugo/FinalProject.git '
