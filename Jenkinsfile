@@ -24,7 +24,7 @@ pipeline {
     }
 post {
         always {
-            emailext body: 'pipeline final project test',emailext attachLog: true, subject: 'pipeline final project test', to: 'shiranbardugo@gmail.com'
+            emailext body: 'pipeline final project test',attachLog: true, subject: 'pipeline final project test', to: 'shiranbardugo@gmail.com'
         }
     }
 }
