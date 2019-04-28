@@ -23,8 +23,14 @@ pipeline {
     }}
     }
 post {
-        always {
-            emailext body: 'pipeline final project test',attachLog: true, subject: 'pipeline final project test', to: 'shiranbardugo@gmail.com'
+        success {
+            emailext body: 'pipeline final project success',attachLog: true, subject: 'pipeline final project success', to: 'shiranbardugo@gmail.com'
+        }
+	aborted {
+            emailext body: 'pipeline final project aborted',attachLog: true, subject: 'pipeline final project aborted', to: 'shiranbardugo@gmail.com'
+        }
+	failure {
+            emailext body: 'pipeline final project failure',attachLog: true, subject: 'pipeline final project failure', to: 'shiranbardugo@gmail.com'
         }
     }
 }
