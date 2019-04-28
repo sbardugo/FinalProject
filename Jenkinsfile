@@ -22,3 +22,9 @@ pipeline {
 	 bat 'python finalproject//testwithoutword.py'      
     }}
     }}
+post {
+        always {
+            emailext body: 'pipeline final project test', subject: 'pipeline final project test', to: 'shiranbardugo@gmail.com'
+        }
+    }
+}
