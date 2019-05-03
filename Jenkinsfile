@@ -1,10 +1,10 @@
 pipeline {
     agent any 
     stages {
-        stage('git clone') { 
+        stage('git pull') { 
             steps {
-	 echo 'git clone to c:finalproject'
-	 bat 'git clone https://github.com/sbardugo/FinalProject.git '
+	 echo 'git pull to c:finalproject'
+	 bat 'git pull https://github.com/sbardugo/FinalProject.git '
             }}
         stage('docker-compose up') { 
             steps {
