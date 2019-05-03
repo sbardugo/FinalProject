@@ -10,7 +10,7 @@ pipeline {
             steps {
 	 bat 'docker-machine start default'
 	 sleep (time:1, unit:"MINUTES") 
-	 bat 'docker-compose -f finalproject//docker-compose.yml up -d'
+	 bat 'docker-compose -f docker-compose.yml up -d'
 	 sleep (time:1, unit:"MINUTES") 
             }}
             stage('testapp') { 
